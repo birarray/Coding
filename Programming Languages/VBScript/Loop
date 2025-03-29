@@ -1,0 +1,50 @@
+'+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+'Written by Edward Ksenofontov
+'Language: VBScript
+'version 1.0 - basic script, 29.03.2025
+'version 1.1 - added additional documentation, 30.03.2025
+
+'Description: this script loop all files in folder
+'+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+'Section A. Header Information 
+Option Explicit
+On Error Resume Next
+Dim cleanpath
+Dim objFSO
+Dim arrFiles
+Dim file
+Dim ext
+
+
+
+'Section B. Reference Information
+cleanpath = "C:\TD\Test"
+Set objFSO = CreateObject("Scripting.FileSystemObject")
+Set arrFiles = objFSO.GetFolder(cleanpath).Files
+
+
+'Section C. Worker Information
+For Each file In arrFiles
+	ext = LCase(objFSO.GetExtensionName(file.Name)) 
+	If ext = "xls" or ext = "xlsx" Then
+
+
+	'Do business logic here
+	WScript.Echo "File:", file.Name
+
+
+
+
+
+
+	End If
+Next	
+
+
+'Section D. Output Information
+Set objFSO = Nothing
+Set arrFiles = Nothing 
+WScript.Echo("All done")
