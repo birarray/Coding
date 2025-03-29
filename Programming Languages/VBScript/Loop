@@ -14,6 +14,7 @@ Option Explicit
 On Error Resume Next
 Dim FolderPath
 Dim objFSO
+Dim objFolder
 Dim arrFiles
 Dim file
 Dim ext
@@ -23,8 +24,8 @@ Dim ext
 'Section B. Reference Information
 FolderPath = "C:\TD\Test"
 Set objFSO = CreateObject("Scripting.FileSystemObject")
-Set arrFiles = objFSO.GetFolder(FolderPath).Files
-
+Set objFolder = objFSO.GetFolder(FolderPath)
+Set arrFiles = objFolder.Files
 
 
 'Section C. Worker Information
@@ -48,5 +49,6 @@ Next
 
 'Section D. Output Information
 Set objFSO = Nothing
+Set objFolder = Nothing
 Set arrFiles = Nothing 
 WScript.Echo("All done")
