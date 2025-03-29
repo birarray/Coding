@@ -36,7 +36,7 @@ For Each file In arrFiles
 
 
 	'Do business logic here
-	WScript.Echo "File:", file.Name
+	WScript.Echo "File:", file.Name, file.Size
 
 
 
