@@ -26,6 +26,7 @@ Set objFSO = CreateObject("Scripting.FileSystemObject")
 Set arrFiles = objFSO.GetFolder(cleanpath).Files
 
 
+
 'Section C. Worker Information
 For Each file In arrFiles
 	ext = LCase(objFSO.GetExtensionName(file.Name)) 
@@ -42,6 +43,7 @@ For Each file In arrFiles
 
 	End If
 Next	
+
 
 
 'Section D. Output Information
