@@ -12,7 +12,7 @@
 'Section A. Header Information 
 Option Explicit
 On Error Resume Next
-Dim cleanpath
+Dim FolderPath
 Dim objFSO
 Dim arrFiles
 Dim file
@@ -21,9 +21,9 @@ Dim ext
 
 
 'Section B. Reference Information
-cleanpath = "C:\TD\Test"
+FolderPath = "C:\TD\Test"
 Set objFSO = CreateObject("Scripting.FileSystemObject")
-Set arrFiles = objFSO.GetFolder(cleanpath).Files
+Set arrFiles = objFSO.GetFolder(FolderPath).Files
 
 
 
