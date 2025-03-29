@@ -28,6 +28,7 @@ Set objFolder = objFSO.GetFolder(FolderPath)
 Set arrFiles = objFolder.Files
 
 
+
 'Section C. Worker Information
 For Each file In arrFiles
 	ext = LCase(objFSO.GetExtensionName(file.Name)) 
