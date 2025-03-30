@@ -1,0 +1,39 @@
+'+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+'Written by Edward Ksenofontov
+'Language: VBScript
+'version 1.0 - basic script, 30.03.2025
+'version 1.1 - added additional documentation, 30.03.2025
+
+'Description: this script emulate mouse click
+'+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+'Section A. Header Information 
+Dim objMouse
+
+
+
+'Section B. Reference Information
+Set objMouse = WScript.CreateObject("Excel.Application")
+objMouse.DisplayAlerts = False
+
+
+Sub LeftClick
+    WScript.Sleep 100
+    objMouse.ExecuteExcel4Macro("Call()""user32"",""mouse_event"",""JJJJJJ""," & "2" & ")")
+    WScript.Sleep 30
+    objMouse.ExecuteExcel4Macro("Call()""user32"",""mouse_event"",""JJJJJJ""," & "4" & ")")
+End Sub
+
+
+
+'Section C. Worker Information
+	'Do business logic here
+
+'Primer of using
+LeftClick
+
+
+'Section D. Output Information
+objMouse.DisplayAlerts = True
