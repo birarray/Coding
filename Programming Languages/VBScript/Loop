@@ -12,6 +12,7 @@
 'Section A. Header Information 
 Option Explicit
 On Error Resume Next
+WScript.Echo "Script start" & Now
 Dim FolderPath
 Dim objFSO
 Dim objFolder
@@ -52,4 +53,4 @@ Next
 Set objFSO = Nothing
 Set objFolder = Nothing
 Set arrFiles = Nothing 
-WScript.Echo("All done")
+WScript.Echo "All done" & Now
