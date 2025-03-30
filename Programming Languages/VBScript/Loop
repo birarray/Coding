@@ -53,4 +53,4 @@ Next
 Set objFSO = Nothing
 Set objFolder = Nothing
 Set arrFiles = Nothing 
-WScript.Echo "All done " & Now
+WScript.Echo "Script end " & Now
